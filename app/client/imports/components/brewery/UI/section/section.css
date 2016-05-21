@@ -1,0 +1,11 @@
+.center--parent{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.center--child{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}

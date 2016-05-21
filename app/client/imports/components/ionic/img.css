@@ -1,0 +1,9 @@
+img{
+  width: 100%;
+  height: auto;
+}
+
+.img--fit{
+  width: 100%;
+  height: 100%;
+}
