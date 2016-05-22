@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './imports/components/app.jsx';
 import Layout from './imports/components/layouts/main.jsx';
-import TBI from './imports/components/tbi.jsx';
+import NoMatch from './imports/components/nomatch.jsx';
 import Index from './imports/components/index.jsx';
 import Search from './imports/components/search.jsx';
 
@@ -56,7 +56,7 @@ var main = function () {
     <Route path="/" component={App} pageList={PageList}>
       { mainRoute }
       {tabRoute }
-      <Route path="*" component={TBI}/>
+      <Route path="*" component={NoMatch}/>
     </Route>
   );
 
@@ -66,6 +66,8 @@ var main = function () {
 if (typeof Meteor !== 'undefined') {
   Meteor.startup(function(){
     if (Meteor.isCordova) {
+      //need this to prevent the app to scroll when the keyboard appears
+      
       cordova.plugins.Keyboard.disableScroll(true);
       main()
     } else {

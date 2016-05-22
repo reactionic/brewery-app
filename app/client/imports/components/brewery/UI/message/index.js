@@ -11,7 +11,8 @@ var Message = React.createClass({
   getDefaultProps: function() {
     return {
       customClasses: '',
-      text: ''
+      text: '',
+      time: 7000
     };
   },
   getInitialState:function(){
@@ -24,7 +25,7 @@ var Message = React.createClass({
       this.setState({
         classes: this.state.classes + ' hide-container'
       })
-    }, 7000);
+    }, this.props.time);
   },
   render() {
     var classes = classnames(

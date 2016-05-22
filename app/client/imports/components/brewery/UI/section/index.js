@@ -14,10 +14,6 @@ var Section = React.createClass({
     };
   },
   render() {
-
-
-
-
     var parentClasses = classnames(
       this.props.align === 'centered' ? 'center--parent' : '',
       this.props.customClasses

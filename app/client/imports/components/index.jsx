@@ -1,13 +1,13 @@
 import React from 'react';
-import { IonContent, IonIcon, IonButton } from 'reactionic';
+import { Meteor } from 'meteor/meteor'; //we import meteor package to call the server
+import { IonContent, IonButton } from 'reactionic';
 import Label from './brewery/UI/label';
 import Section from './brewery/UI/section'
 import Input from './brewery/UI/input'
 import Message from './brewery/UI/message';
 import IonImage from './ionic/IonImage';
-import { Meteor } from 'meteor/meteor';
 
-const styles = require('./index.scss');
+const styles = require('./index.scss'); //we require the index css
 
 
 var Index = React.createClass({
@@ -32,26 +32,31 @@ var Index = React.createClass({
   handleSearch:function() {
     const that = this;
     if(this.state.q === ''){
+      //if the search is null, we show a message
       this.setState({
-        result: <Message text="You have to search something" />
+        result: <Message text="You have to search something" time={5000} />
       });
+
       return;
     }
+    //we call the server and pass the query param
+
     Meteor.call('search', this.state.q, function(err, response){
       that.handleResponse(response.data);
     });
 
   },
   handleResponse:function(json){
-    console.log('JSON',json);
+
     if(json.data === undefined){
       this.setState({
-        result: <Message text="No results found. Try again with another beer" />,
+        result: <Message text="No results found. Try again with another beer" time={5000} />,
         q: ''
       });
     }
     else {
-      //We differ breweries from beers and we passed to the location state prop of our next route
+      //We differ breweries from beers and we passed
+      //to the location state object
 
       let breweries = [];
       let beers     = [];

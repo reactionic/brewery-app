@@ -17,8 +17,7 @@ var Search = React.createClass({
   },
 
   breweryInfo:function(brewery, event){
-    console.log('brewery data',brewery);
-
+    //we build a modal for the brewery
     const title = brewery.name;
 
     const Modal = (
@@ -89,10 +88,6 @@ var Search = React.createClass({
       </IonItem>
      )
     })
-
-
-
-
 
     return (
       <IonContent customClasses=""
