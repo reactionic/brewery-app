@@ -3,10 +3,8 @@
 
 ### Install, build and run ###
 
-Installation is straightforward:
 
-
-Then in a terminal:
+In the terminal:
 
     cd brewery-app
     npm install
