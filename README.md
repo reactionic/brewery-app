@@ -11,3 +11,5 @@ In the terminal:
 
     cd app
     meteor run
+
+    you can see the app running in https://brewery-app.herokuapp.com/
