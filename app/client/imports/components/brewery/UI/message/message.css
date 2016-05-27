@@ -1,0 +1,66 @@
+/* ANIMATION BASED ON
+  http://codepen.io/bluehaus/pen/EfGyi
+*/
+
+.message--container{
+  font-size: 18px;
+  padding: 12px 10px 10px 12px;
+  background: #fff;
+  display: inline-block;
+
+  opacity:0;  /* make things invisible upon start */
+ -webkit-animation:message--container ease-in 1;  /* call our keyframe named message--container, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:message--container ease-in 1;
+ animation:message--container ease-in 1;
+
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+
+ -webkit-animation-duration:1s;
+ -moz-animation-duration:1s;
+ animation-duration:1s;
+
+}
+
+.hide-container{
+  opacity: 1;
+  -webkit-animation:hide-message--container ease-in 1;  /* call our keyframe named message--container, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:hide-message--container ease-in 1;
+  animation:hide-message--container ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+
+@-webkit-keyframes message--container {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@-moz-keyframes message--container {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@keyframes message--container {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@-webkit-keyframes hide-message--container {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+@-moz-keyframes hide-message--container {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+@keyframes hide-message--container {
+  from { opacity:1; }
+  to { opacity:0; }
+}

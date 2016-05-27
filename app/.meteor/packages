@@ -1,0 +1,24 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-base             # Packages every Meteor app needs to have
+mongo                   # The database Meteor supports right now
+session                 # Client-side reactive dictionary for your app
+tracker                 # Meteor's client-side reactive programming library
+
+
+
+
+static-html
+random
+react-meteor-data
+fourseven:scss
+mobile-experience
+standard-minifier-js
+ecmascript
+package-stats-opt-out
+standard-minifier-css
+http
