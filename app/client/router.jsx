@@ -12,8 +12,8 @@ import Search from './imports/components/search.jsx';
 
 var main = function () {
   var pageList = [
-    { path:'/', component:Index, title:'React Ionic'},
-    { path:'/search', component:Search, title:'React Ionic'}
+    { path:'/', component:Index, title:'Brewery Demo'},
+    { path:'/search', component:Search, title:'Search - Brewery Demo '}
   ];
 
   var tabRoutes;
@@ -67,7 +67,7 @@ if (typeof Meteor !== 'undefined') {
   Meteor.startup(function(){
     if (Meteor.isCordova) {
       //need this to prevent the app to scroll when the keyboard appears
-      
+
       cordova.plugins.Keyboard.disableScroll(true);
       main()
     } else {
